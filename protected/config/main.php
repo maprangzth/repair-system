@@ -74,7 +74,7 @@ return array(
                         'location'=>array(CActiveRecord::BELONGS_TO, 'Locations', 'location_id'),
                     ),
                     'profileRelations'=>array(
-                        'departmens'=>array(CActiveRecord::BELONGS_TO, 'Locations', 'department_id'),
+                        'departmens'=>array(CActiveRecord::BELONGS_TO, 'Departments', 'department_id'),
                     ),
                 ),
                 'rights'=>array(
