@@ -3,7 +3,7 @@
 /* @var $model Devices */
 /* @var $form CActiveForm */
 ?>
-
+ <?php $ID_User = Yii::app()-> session['id_user']; ?>
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -21,27 +21,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'device_type_id'); ?>
-		<?php echo $form->dropdownList($model, "device_type_id", DeviceTypes::getOptions()); ?>
+		<?php echo $form->dropDownList($model,'device_type_id', CHtml::listData(DeviceTypes::model()->findAll(), 'id', 'device_type_name'), array('empty'=>'Select type')); ?>
 		<?php echo $form->error($model,'device_type_id'); ?>
-		
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'device_brand_id'); ?>
-		<?php echo $form->dropdownList($model, "device_brand_id", DeviceBrands::getOptions()); ?>
+		<?php echo $form->dropDownList($model,'device_brand_id', CHtml::listData(DeviceBrands::model()->findAll(), 'id', 'device_brand_name'), array('empty'=>'Select brand')); ?>
 		<?php echo $form->error($model,'device_brand_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'device_model_id'); ?>
-		<?php echo $form->dropdownList($model, "device_model_id", DeviceModels::getOptions()); ?>
+		<?php echo $form->dropDownList($model,'device_model_id', CHtml::listData(DeviceModels::model()->findAll(), 'id', 'device_model_name'), array('empty'=>'Select model')); ?>
 		<?php echo $form->error($model,'device_model_id'); ?>
 	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'device_owner'); ?>
-		<?php //echo $form->textField($model,'device_owner'); ?>
-		<?php echo $form->dropDownList($model,'device_owner', CHtml::listData(User::model()->findAll(), 'id', 'username'), array('empty'=>'Select Owner')); ?>
+		<?php echo $form->textField($model,'device_owner',array('value'=>$ID_User)); ?>
+		<?php //echo $form->dropDownList($model,'device_owner', CHtml::listData(User::model()->findAll(), 'id', 'username'), array('empty'=>'Select Owner')); ?>
 		<?php echo $form->error($model,'device_owner'); ?>
 	</div>
 
