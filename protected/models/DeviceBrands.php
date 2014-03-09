@@ -41,7 +41,7 @@ class DeviceBrands extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			//"devices" => array(self::HAS_MANY, "Devices", "device_type_id"),
+			'devices' => array(self::HAS_MANY, 'Devices', 'device_brand_id'),
 			
 		);
 	}

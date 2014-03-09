@@ -9,20 +9,20 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('device_type_id')); ?>:</b>
-	<?php echo CHtml::encode($data->device_type_id); ?>
+	<b><?php echo CHtml::encode($data->device_types->getAttributeLabel('device_type_name')); ?>:</b>
+        <?php echo CHtml::encode($data->device_types->device_type_name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('device_brand_id')); ?>:</b>
-	<?php echo CHtml::encode($data->device_brand_id); ?>
+	<b><?php echo CHtml::encode($data->device_brands->getAttributeLabel('device_brand_name')); ?>:</b>
+	<?php echo CHtml::encode($data->device_brands->device_brand_name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('device_model_id')); ?>:</b>
-	<?php echo CHtml::encode($data->device_model_id); ?>
+	<b><?php echo CHtml::encode($data->device_models->getAttributeLabel('device_brand_name')); ?>:</b>
+	<?php echo CHtml::encode($data->device_models->device_model_name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('device_owner')); ?>:</b>
-	<?php echo CHtml::encode($data->device_owner); ?>
+	<?php echo CHtml::encode($data->profiles->firstname); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('device_code')); ?>:</b>

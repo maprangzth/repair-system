@@ -125,7 +125,12 @@ class DevicesController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Devices');
+		//$dataProvider=new CActiveDataProvider('Devices');
+                $dataProvider=new CActiveDataProvider('Devices', array(
+                    'criteria'=>array(
+                        'with'=>array('device_types','device_brands','device_models','profiles'),
+                    ),
+                ));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

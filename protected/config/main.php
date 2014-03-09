@@ -76,6 +76,9 @@ return array(
                     'profileRelations'=>array(
                         'departmens'=>array(CActiveRecord::BELONGS_TO, 'Departments', 'department_id'),
                     ),
+                    'profileRelations'=>array(
+                        'devices'=>array(CActiveRecord::BELONGS_TO, 'Devices', 'user_id'),
+                    ),
                 ),
                 'rights'=>array(
 

@@ -50,10 +50,11 @@ class Devices extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			"device_types"	=> array(self::BELONGS_TO, "DeviceTypes", "device_type_id"),
-			"device_brands"	=> array(self::BELONGS_TO, "DeviceBrands", "device_brand_id"),
-			"device_models"	=> array(self::BELONGS_TO, "DeviceModels", "device_model_id"),
+			'device_types'	=> array(self::BELONGS_TO, 'DeviceTypes', 'device_type_id'),
+			'device_brands'	=> array(self::BELONGS_TO, 'DeviceBrands', 'device_brand_id'),
+			'device_models'	=> array(self::BELONGS_TO, 'DeviceModels', 'device_model_id'),
 			'users'		=> array(self::BELONGS_TO, 'User', 'id'),
+                        'profiles'=>array(self::HAS_MANY, 'Profile', 'user_id'),
 		);
 	}
 
