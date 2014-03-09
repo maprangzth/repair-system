@@ -107,33 +107,6 @@ return array(
                 'loginUrl'=>array('/user/login'),
                 
                 ),
-                'Smtpmail'=>array(
-                    'class'=>'application.extensions.smtpmail.PHPMailer',
-                    'Host'=>"smtp.gmail.com",
-                    'Username'=>'k.kamsamur@gmail.com',
-                    'Password'=>'rootmp4442',
-                    'Mailer'=>'smtp',
-                    'Port'=>465,
-                    'SMTPAuth'=>true,
-                    'SMTPSecure' => 'tls',
-                ), 
-                    /*
-                'mail' => array(
-                    'class' => 'ext.yii-mail.YiiMail',
-                    'transportType'=>'smtp',
-                    'transportOptions'=>array(
-                        'host'=>'smtp.gmail.com',
-                        'username'=>'k.kamsamur@gmail.com',
-                        'password'=>'rootmp4442',
-                        'port'=>'465',
-                        'encryption'=>'ssl',
-                    ),
-                    'viewPath' => 'application.views.mail',
-                    'logging' => true,
-                    'dryRun' => false
-                ),
-                     * 
-                     */
                 'authManager'=>array(
                         'class'=>'RDbAuthManager',
                         'connectionID'=>'db',
